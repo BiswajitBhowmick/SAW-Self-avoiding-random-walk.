@@ -32,12 +32,7 @@ y = int(input())
 rand_x = x + row
 rand_y = y + col
 
-# defining 1D array for conformers:
-conformers = 0
 
-record = steps  # for further use
-ip = steps  # for further use
-ip1 = steps  # for further use
 
 grid[rand_x][rand_y] = 1  # initial position
 # Finds single SAW path for given inputs:

@@ -26,8 +26,6 @@ c Taking input values:
       read(*,*) steps ! total #s of steps
       write(*,*) 'Enter the step length'
       read(*,*) l ! # step size
-  !    write(*,*) 'Enter the number of iterations'
-   !   read(*,*) iter !# of loops
       write(*,*) ' Initial coordinates (x,y) one after another:'
       read(*,*) x, y ! Initial coordinates assignment
 
@@ -47,8 +45,7 @@ c====================================================================
           rand_x=rand_x+l
          grid(rand_x,rand_y)=1
          steps=steps-1
-        print*,"+x: Final coordinates (x,y):"
-     &  ,rand_x-x-(row)/2,rand_y-y-(col)/2
+        print*,"+x"
          endif
 c====================================================================
         if(grid(rand_x,rand_y+l).eq.0 .and.generator.gt.0.25
@@ -56,8 +53,7 @@ c====================================================================
          rand_y=rand_y+l
          grid(rand_x,rand_y)=1
           steps=steps-1
-      print*,"+y: Final coordinates (x,y):"
-     &  ,rand_x-x-(row)/2,rand_y-y-(col)/2
+      print*,"+y"
          endif
 c====================================================================
         if(grid(rand_x-l,rand_y).eq.0 .and. generator.gt.0.5
@@ -65,8 +61,7 @@ c====================================================================
         rand_x=rand_x-l
         grid(rand_x,rand_y)=1
          steps=steps-1
-         print*,"-x: Final coordinates (x,y):"
-     &  ,rand_x-x-(row)/2,rand_y-y-(col)/2
+         print*,"-x"
          endif
 c====================================================================
 
@@ -75,8 +70,7 @@ c====================================================================
          rand_y=rand_y-l
         grid(rand_x,rand_y)=1
          steps=steps-1
-       print*,"-y: Final coordinates (x,y):"
-     &  ,rand_x-x-(row)/2,rand_y-y-(col)/2
+       print*,"-y"
          endif
 c====================================================================
 

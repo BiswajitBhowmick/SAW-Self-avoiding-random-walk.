@@ -34,7 +34,7 @@ c Copying initial coordinates to another variable for further analysis:
       rand_y=y+(col)/2
 
 
-      grid(rand_x,rand_y)=1 !intial position
+      grid(rand_x,rand_y)=1 !initial position
 
       do while(steps.ne.0)
 
